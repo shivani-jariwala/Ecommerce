@@ -2,6 +2,8 @@
 const path = require('path');
 
 const express = require('express');
+//const dotenv = require('dotenv');
+require('dotenv').config()
 
 const bodyParser = require('body-parser');
 
@@ -17,7 +19,7 @@ const User = require('./models/user');
 // const { v4: uuidv4 } = require('uuid');
 
 
-const MONGODB_URI ='mongodb+srv://shivani_31:ABcd34@cluster0.hr6gv.mongodb.net/shop?retryWrites=true&w=majority';
+const MONGODB_URI =process.env.MONGODB_URI;
 
 
 const app = express();
